@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>hello</title>
+	</head>
+	 <body>
+	 	<p id="demo">Get the Total</p>
+<input type="checkbox" name="number" value=5>$5</>
+		<input type="checkbox" name="number" value=10>$10
+		<input type="checkbox" name="number" value=15>$15
+		<input type="checkbox" name="number" value=20>$20
+		<input type="checkbox" name="number" value=25>$25
+		<input type="checkbox" name="number" value=30>$30 <br/>
+        <input type="button" name="name" value="selectall" onclick="selectAll()">
+		<input type="button" name="name" value="UnSelectAll" onclick="UnSelectAll()"><br/>
+		<input type="button" name="number" value="submit" onclick="checked1()"> 
+	 	
+	 		<script>
+	 			function checked1() {
+	 				var num=document.getElementsByName('number');
+	 				var sum=0;
+	 	       for (var i = 0; i < num.length; i++) {
+	 	           if (num[i].type == 'checkbox' &&  num[i].checked == true)
+	 	           sum+=parseInt(num[i].value);
+	 	             
+	 	       }
+	 	       document.write(sum);
+	 	   } 
+
+	 		function selectAll() {
+	 	       var items = document.getElementsByName('number');
+	 	       for (var i = 0; i < items.length; i++) {
+	 	           if (items[i].type == 'checkbox')
+	 	               items[i].checked = true;
+	 	       }
+	 	   }
+
+	 	   function UnSelectAll() {
+	 	       var items = document.getElementsByName('number');
+	 	       for (var i = 0; i < items.length; i++) {
+	 	           if (items[i].type == 'checkbox')
+	 	               items[i].checked = false;
+	 	       }
+	 	   }	
+	 	</script>     
+	
+
+	 	
+	</body>
+	</html>
+		
+		
+	 
+
+
+
